@@ -1,0 +1,50 @@
+#homePage_cover {
+  background-image: url("https://wallpaperaccess.com/full/1432000.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  width: auto;
+  height: 900px;
+  padding: 0;
+}
+
+/* #homePage_cover > div {
+  width: 40%;
+  border: 1px solid rgb(226, 226, 226);
+} */
+
+#container {
+  display: flex;
+}
+
+#container > div:first-child {
+  background-color: #ffffff;
+  height: 60%;
+  border: 1px solid rgb(228, 228, 228);
+  opacity: 0.8;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 25%;
+  border-radius: 10px;
+  line-height: 200%;
+  letter-spacing: 1px;
+}
+#container > div:first-child > h3 {
+  margin: 5%;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#timeline_cards {
+  width: 50%;
+  margin: 4% auto;
+}
+
+#steps_heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}

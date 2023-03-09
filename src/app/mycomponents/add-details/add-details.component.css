@@ -1,0 +1,9 @@
+.cross_icon {
+  padding: 5px;
+}
+
+.cross_icon:hover {
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 4px;
+}

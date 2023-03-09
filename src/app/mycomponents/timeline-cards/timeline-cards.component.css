@@ -1,0 +1,147 @@
+/* Steps_Container */
+#steps_container {
+  /* border: 1px solid; */
+  width: 50%;
+  margin: 4% auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 10px;
+}
+
+.left_side_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  padding: 10px 10px 0px 10px;
+  position: relative;
+  height: auto;
+}
+
+.left_side_image_box {
+  width: 420px;
+  /* height: 420px; */
+  /* border: 1px solid green; */
+  padding: 0px;
+  margin: 0px;
+}
+
+.left_side_image_box > img {
+  width: 300px;
+  position: absolute;
+  top: -57px;
+  left: 150px;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+.left_side_icon_box {
+  padding: 0;
+  width: 10px;
+}
+
+.left_side_icon_box > img {
+  position: absolute;
+  width: 50px;
+  top: 33px;
+  left: 182px;
+}
+
+.left_side_content_continer {
+  width: 50%;
+  height: 35vh;
+  margin-right: 0px;
+  /* height: 300px; */
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+.left_side_content_continer > h3 {
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+.left_side_content_continer > h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.left_side_content_continer > h2:hover {
+  color: rgb(241, 90, 2);
+}
+
+/* right_side_card */
+.right_side_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  padding: 10px 10px 0px 10px;
+  position: relative;
+  height: auto;
+}
+
+.right_side_content_continer {
+  width: 50%;
+  margin-left: 0;
+  height: 35vh;
+  /* height: 300px; */
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+.right_side_content_continer > h3:last-child {
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+.right_side_content_continer > h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.right_side_content_continer > h2:hover {
+  color: rgb(241, 90, 2);
+}
+
+.right_side_image_box {
+  width: 420px;
+  height: 420px;
+  /* border: 1px solid green; */
+  padding: 0px;
+  margin: 0px;
+}
+
+.right_side_image_box > img {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+.right_side_icon_box {
+  padding: 0;
+  width: 10px;
+}
+
+.right_side_icon_box > img {
+  position: absolute;
+  width: 50px;
+  top: 90px;
+  right: 180px;
+}

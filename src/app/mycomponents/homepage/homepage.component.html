@@ -1,0 +1,28 @@
+<div>
+  <div id="homePage_cover">
+    <app-navbar (closeStatus)="handleStatus($event)"></app-navbar>
+    <!-- <img src="https://wallpaperaccess.com/full/1432000.jpg" alt="home-page" /> -->
+    <div id="container">
+      <div>
+        <h3>
+          Travelling is an exciting and enriching experience that allows us to
+          explore new places, learn about different cultures, and create lasting
+          memories. However, planning a trip can be overwhelming, especially if
+          you are not familiar with the destination. In this article, we will
+          discuss some tips and strategies for planning your next trip and
+          making the most out of your travel experience.
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="steps_heading">Steps for batter Experience</h2>
+  <!-- Steps for planning the trip -->
+  <app-timeline-cards></app-timeline-cards>
+</div>
+<app-add-details
+  *ngIf="isSelected"
+  (changeStatus)="statusChanged($event)"
+></app-add-details>
+
+<!-- long content about travelling and planing -->
