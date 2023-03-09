@@ -30,7 +30,7 @@
 .left_side_image_box > img {
   width: 300px;
   position: absolute;
-  top: -57px;
+  top: -45px;
   left: 150px;
   /* height: 100%; */
   /* border: 1px solid red; */
@@ -45,7 +45,7 @@
 .left_side_icon_box > img {
   position: absolute;
   width: 50px;
-  top: 33px;
+  top: 45px;
   left: 182px;
 }
 
@@ -127,7 +127,7 @@
 .right_side_image_box > img {
   width: 300px;
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 150px;
   /* height: 100%; */
   /* border: 1px solid red; */
@@ -145,3 +145,5 @@
   top: 90px;
   right: 180px;
 }
+
+/*  */

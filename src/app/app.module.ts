@@ -9,6 +9,10 @@ import { ScollprogressDirective } from './directives/scollprogress.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddDetailsComponent } from './mycomponents/add-details/add-details.component';
 import { TimelineCardsComponent } from './mycomponents/timeline-cards/timeline-cards.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { TimelineCardsComponent } from './mycomponents/timeline-cards/timeline-c
     AddDetailsComponent,
     TimelineCardsComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,11 +3,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   /* align-items: center; */
   /* justify-content: space-around; */
-  width: auto;
+  /* width: auto; */
   height: 900px;
   padding: 0;
+  margin: 0;
 }
 
 /* #homePage_cover > div {

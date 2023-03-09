@@ -6,7 +6,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./add-details.component.css']
 })
 export class AddDetailsComponent {
-
   @Output() changeStatus = new EventEmitter<boolean>();
 
   handleModuleClose() {
