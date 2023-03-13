@@ -5,8 +5,6 @@ class DataTimeLine {
 
 export interface Data {
     city: string,
-    start_date: string,
-    end_date: string,
     date: DataTimeLine,
     budget: number,
     currency: string,
