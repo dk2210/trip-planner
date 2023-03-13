@@ -8,11 +8,21 @@
   padding: 4px;
 }
 
+form {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
 .input_field {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 90%;
+  opacity: 1;
+  margin: 10% auto;
 }
 
 .input_icon {
@@ -21,6 +31,256 @@
 }
 
 .input_box {
+  border: 1px solid lightgrey;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
   outline: none;
+  font-weight: bold;
+  color: rgb(99, 0, 0);
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
 }
+.date_input_field {
+  display: flex;
+  width: 90%;
+  margin: 10% auto;
+  border-radius: 10px;
+}
+.date_input_box-1,
+.date_input_box-2 {
+  width: 90%;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(99, 0, 0);
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.date_input_box-1 {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.date_input_box-2 {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.date_input_box-1:required:invalid {
+  color: transparent;
+}
+.date_input_box-1:focus {
+  cursor: pointer;
+}
+
+/* budget field */
+.budget_input_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  opacity: 1;
+  margin: 10% auto;
+}
+.budget_icon {
+  position: absolute;
+  left: 1%;
+  /* right: 10px; */
+}
+
+.budget_input_box {
+  padding: 0.8rem 8rem 0.8rem 2.2rem;
+  outline: none;
+  font-weight: bold;
+  color: rgb(99, 0, 0);
+  width: 81%;
+  font-size: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.budget_select_option {
+  position: absolute;
+  padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+  right: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+}
+
+/* Traveeling Field */
+.travelling_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 52%;
+  opacity: 1;
+  height: auto;
+  margin: 10% auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.travelling_field > p:nth-child(2) {
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.travelling_icon {
+  position: absolute;
+  left: 6%;
+}
+
+/* Packing field */
+.packing_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 78%;
+  opacity: 1;
+  height: auto;
+  margin: 10% auto;
+  border: 1px solid lightgrey;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+.packing_icon {
+  position: absolute;
+  left: 5%;
+}
+
+.packing_field > p:nth-child(2) {
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.packing_field > a:nth-child(3) {
+  margin-left: 1%;
+}
+
+/* Accomodation Filed */
+.accomodation_input_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 65%;
+  opacity: 1;
+  height: auto;
+  margin: 10% auto;
+  padding: 1rem 2.8rem;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.accomodation_icon {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.accomodation_input_field > h4:nth-child(2) {
+  width: inherit;
+}
+
+.accomodation_select_box {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* Food Field */
+.food_input_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  opacity: 1;
+  height: auto;
+  margin: 10% auto;
+  padding: 1rem 2.8rem;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.food_icon {
+  position: absolute;
+  left: 15px;
+  top: 33px;
+}
+
+.food_input_field > h4:nth-child(2) {
+  width: inherit;
+}
+
+.food_select_box {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* direction button */
+
+.directions_button_box {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto 20px auto;
+}
+
+.directions_button_box > button {
+  padding: 0.5rem 2rem;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid whitesmoke;
+  background-color: #34344c;
+  color: white;
+  border-radius: 5px;
+}
+
+.directions_button_box > button:hover {
+  color: #34344c;
+  border: 2px solid #34344c;
+  background-color: whitesmoke;
+  cursor: grab;
+}
+
+/*submit*/
+.submit_button {
+  padding: 0.5rem 2rem;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid whitesmoke;
+  background-color: #34344c;
+  color: white;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+/* Animation */
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[fadeIn] {
+  animation: fadeIn 5s;
+} */

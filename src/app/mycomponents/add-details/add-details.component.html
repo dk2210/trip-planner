@@ -17,10 +17,12 @@
       width: 600px;
       height: 600px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       background-color: white;
       justify-content: space-evenly;
       position: relative;
+      opacity: 0.8;
     "
   >
     <div
@@ -30,32 +32,167 @@
     >
       ❌
     </div>
-    <form action="">
-      <label for="">Enter visiting place</label>
+    <!-- <div class="animate__animated animate__fadeIn animae_delay-2s">
+      Hello, world!
+    </div> -->
+
+    <!-- Form - 1 -->
+    <form *ngIf="isForm1" action="">
       <div class="input_field">
         <img
           class="input_icon"
           src="../../../assets/place_visit.svg"
           alt="location"
         />
-        <input class="input_box" type="text" />
+        <input
+          class="input_box"
+          type="text"
+          placeholder="visiting places"
+          name="city"
+          [(ngModel)]="city"
+        />
+      </div>
+      <div class="date_input_field">
+        <input
+          class="date_input_box-1"
+          type="text"
+          onfocus="(this.type='date')"
+          onblur="(this.type='text')"
+          placeholder="start date"
+          name="start_date"
+          [(ngModel)]="start_date"
+        />
+        <input
+          class="date_input_box-2"
+          type="text"
+          onfocus="(this.type='date')"
+          onblur="(this.type='text')"
+          placeholder="end date"
+          name="end_date"
+          [(ngModel)]="end_date"
+        />
+      </div>
+      <!-- <input type="submit" value="submit" /> -->
+
+      <div class="directions_button_box">
+        <button (click)="handleFormBack(1)">Back</button>
+        <button (click)="handleForm1Submit()">Next</button>
       </div>
     </form>
-    <p>
-      <mat-form-field appearance="fill">
-        <mat-label>Fill form field</mat-label>
-        <input matInput placeholder="Placeholder" />
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder" />
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
+
+    <!-- Form - 2 -->
+    <form *ngIf="isForm2">
+      <div class="budget_input_field">
+        <img
+          src="../../../assets//budget.svg"
+          alt="budget"
+          class="budget_icon"
+        />
+
+        <input
+          class="budget_input_box"
+          type="text"
+          onfocus="(this.type='number')"
+          onblur="(this.type='text')"
+          placeholder="mention your budget"
+          name="budget"
+          [(ngModel)]="budget"
+        />
+        <select
+          class="budget_select_option"
+          name="currency"
+          id=""
+          [(ngModel)]="currency"
+        >
+          <option value="rupees">₹/-</option>
+          <option value="dollar">$</option>
+          <option value="pound">£</option>
+        </select>
+      </div>
+
+      <div class="travelling_field">
+        <img
+          src="../../../assets//travelling.svg"
+          class="travelling_icon"
+          alt="travelling"
+        />
+        <p>Travelling :</p>
+        <input
+          type="radio"
+          value="air"
+          name="travelling"
+          [(ngModel)]="travelling"
+        />
+        <label for="">Air</label>
+        <input
+          type="radio"
+          value="train"
+          name="travelling"
+          [(ngModel)]="travelling"
+        />
+        <label>Train</label>
+        <input
+          type="radio"
+          value="bus"
+          name="travelling"
+          [(ngModel)]="travelling"
+        />
+        <label>Bus</label>
+      </div>
+
+      <div class="packing_field">
+        <img
+          src="../../../assets/packing.svg"
+          alt="packing"
+          class="packing_icon"
+        />
+        <p>Things to carry :</p>
+        <a href="">https://youtu.be/MzStZKU7Iqk</a>
+      </div>
+
+      <!-- <input type="submit" value="submit" /> -->
+      <div class="directions_button_box">
+        <button (click)="handleFormBack(2)">Back</button>
+        <button (click)="handleForm2Submit()">Next</button>
+      </div>
+    </form>
+
+    <!-- Form - 3 -->
+    <form action="" *ngIf="isForm3" (ngSubmit)="handleSubmit()">
+      <div class="accomodation_input_field">
+        <img
+          src="../../../assets/hotel-hostel-svgrepo-com.svg"
+          class="accomodation_icon"
+          alt=""
+        />
+        <h4>Accomodation :</h4>
+        <select
+          name=""
+          class="accomodation_select_box"
+          [(ngModel)]="accomodation"
+          name="accomodation"
+        >
+          <option value="hotel">Hotel</option>
+          <option value="doormatry">DoorMatry</option>
+          <option value="tent">Tent</option>
+          <option value="ressort">Ressort</option>
+        </select>
+      </div>
+
+      <div class="food_input_field">
+        <img src="../../../assets//food.svg" alt="food" class="food_icon" />
+        <h4>Food :</h4>
+        <select name="" class="food_select_box" [(ngModel)]="food" name="food">
+          <option value="restaurent">Restaurent</option>
+          <option value="Banquet">Banquet</option>
+          <option value="">Local</option>
+        </select>
+      </div>
+
+      <div class="directions_button_box">
+        <button (click)="handleFormBack(3)">Back</button>
+        <input type="submit" value="submit" class="submit_button" />
+      </div>
+    </form>
   </div>
 </div>
