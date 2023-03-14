@@ -31,7 +31,7 @@ export class AddDetailsComponent {
   city: string = "";
   start_date: string = "";
   end_date: string = "";
-  budget: number = 0;
+  budget: string = "";
   currency: string = "";
   travelling: string = "";
   accomodation: string = "";
