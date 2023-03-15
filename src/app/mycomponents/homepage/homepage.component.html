@@ -1,6 +1,9 @@
 <div>
   <div id="homePage_cover">
-    <app-navbar (closeStatus)="handleStatus($event)"></app-navbar>
+    <app-navbar
+      (closeStatus)="handleStatus($event)"
+      (closeStatusForListPage)="handleStatusForLisPage($event)"
+    ></app-navbar>
     <!-- <img src="https://wallpaperaccess.com/full/1432000.jpg" alt="home-page" /> -->
     <div id="container">
       <div>
@@ -24,5 +27,10 @@
   *ngIf="isSelected"
   (changeStatus)="statusChanged($event)"
 ></app-add-details>
+
+<app-list-data
+  *ngIf="isSelectedForListPage"
+  (closeStatusForListPage)="statusChanged($event)"
+></app-list-data>
 
 <!-- long content about travelling and planing -->

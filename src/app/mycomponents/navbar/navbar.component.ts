@@ -11,6 +11,7 @@ export class NavbarComponent {
   constructor(private route: Router) { }
 
   @Output() closeStatus = new EventEmitter<boolean>();
+  @Output() closeStatusForListPage = new EventEmitter<boolean>();
 
   isSelected: boolean = false;
 
@@ -18,5 +19,7 @@ export class NavbarComponent {
     this.closeStatus.emit(true);
   }
 
-
+  handleClickForListPage() {
+    this.closeStatusForListPage.emit(true);
+  }
 }

@@ -8,6 +8,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class HomepageComponent implements OnInit {
   isSelected: boolean = false;
+  isSelectedForListPage: boolean = false;
 
   constructor(private dataService: DataServiceService) {
 
@@ -27,6 +28,11 @@ export class HomepageComponent implements OnInit {
 
   statusChanged(reply: boolean) {
     this.isSelected = reply;
+    this.isSelectedForListPage = reply
+  }
+
+  handleStatusForLisPage(reply: boolean) {
+    this.isSelectedForListPage = reply
   }
 
 

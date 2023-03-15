@@ -8,6 +8,7 @@ export class DataServiceService {
 
   baseUrl: string = 'http://localhost:8000/'
 
+
   constructor(private http: HttpClient) { }
 
   dataInfo() {
