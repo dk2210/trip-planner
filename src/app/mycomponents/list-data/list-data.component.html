@@ -20,6 +20,11 @@
           <p class="" (click)="handleCardModel()">more information</p>
         </div>
       </div>
+
+      <app-card-model
+        (closeCardModel)="cardModelClose($event)"
+        *ngIf="isSelectedForCardModel"
+      ></app-card-model>
     </div>
   </div>
 </div>

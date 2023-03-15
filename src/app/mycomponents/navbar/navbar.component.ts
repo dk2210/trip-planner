@@ -16,6 +16,7 @@ export class NavbarComponent {
   isSelected: boolean = false;
 
   handleClick() {
+    this.router.navigate(['/'])
     this.closeStatus.emit(true);
   }
 

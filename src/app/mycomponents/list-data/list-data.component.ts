@@ -44,4 +44,10 @@ export class ListDataComponent {
   handleCardModel() {
     this.isSelectedForCardModel = true;
   }
+
+  cardModelClose(reply: boolean) {
+    console.log("Replying:", reply);
+
+    this.isSelectedForCardModel = reply;
+  }
 }
