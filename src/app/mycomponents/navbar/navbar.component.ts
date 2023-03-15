@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor(private route: Router) { }
+  constructor(private router: Router) { }
 
   @Output() closeStatus = new EventEmitter<boolean>();
   @Output() closeStatusForListPage = new EventEmitter<boolean>();
@@ -21,5 +21,10 @@ export class NavbarComponent {
 
   handleClickForListPage() {
     this.closeStatusForListPage.emit(true);
+    this.router.navigate(['/list-data'])
+  }
+
+  handleClickForHomePage() {
+    this.router.navigate(['/'])
   }
 }

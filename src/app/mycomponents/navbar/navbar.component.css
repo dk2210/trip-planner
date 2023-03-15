@@ -7,6 +7,7 @@
   opacity: 0.7;
   letter-spacing: 1.5px;
   /* padding: 0.5% 0; */
+  z-index: 99;
 }
 
 .navbar_box_1 {
@@ -33,6 +34,7 @@
   cursor: grab;
 }
 
-.listpage {
+.listPage,
+.homePage {
   cursor: grab;
 }
