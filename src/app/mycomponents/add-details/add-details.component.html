@@ -26,7 +26,7 @@
     "
   >
     <div
-      style="position: absolute; top: 2px; right: 2px; cursor: grab"
+      style="position: absolute; top: 8px; right: 8px; cursor: grab"
       (click)="handleModuleClose()"
       class="cross_icon"
     >
@@ -104,9 +104,9 @@
           id=""
           [(ngModel)]="currency"
         >
-          <option value="rupees">₹/-</option>
-          <option value="dollar">$</option>
-          <option value="pound">£</option>
+          <option value="₹/-">₹/-</option>
+          <option value="$">$</option>
+          <option value="£">£</option>
         </select>
       </div>
 
@@ -119,21 +119,21 @@
         <p>Travelling :</p>
         <input
           type="radio"
-          value="air"
+          value="Air"
           name="travelling"
           [(ngModel)]="travelling"
         />
         <label for="">Air</label>
         <input
           type="radio"
-          value="train"
+          value="Train"
           name="travelling"
           [(ngModel)]="travelling"
         />
         <label>Train</label>
         <input
           type="radio"
-          value="bus"
+          value="Bus"
           name="travelling"
           [(ngModel)]="travelling"
         />
@@ -172,10 +172,10 @@
           [(ngModel)]="accomodation"
           name="accomodation"
         >
-          <option value="hotel">Hotel</option>
-          <option value="doormatry">DoorMatry</option>
-          <option value="tent">Tent</option>
-          <option value="ressort">Ressort</option>
+          <option value="Hotel">Hotel</option>
+          <option value="Doormatry">DoorMatry</option>
+          <option value="Tent">Tent</option>
+          <option value="Ressort">Ressort</option>
         </select>
       </div>
 
@@ -183,9 +183,9 @@
         <img src="../../../assets//food.svg" alt="food" class="food_icon" />
         <h4>Food :</h4>
         <select name="" class="food_select_box" [(ngModel)]="food" name="food">
-          <option value="restaurent">Restaurent</option>
+          <option value="Restaurent">Restaurent</option>
           <option value="Banquet">Banquet</option>
-          <option value="">Local</option>
+          <option value="Local">Local</option>
         </select>
       </div>
 
@@ -194,5 +194,33 @@
         <input type="submit" value="submit" class="submit_button" />
       </div>
     </form>
+
+    <!-- data- continor -->
+    <div *ngIf="isDataContiner" id="data_container">
+      <div>
+        <h2 style="margin: 0; padding: 0">Your planned data</h2>
+        <hr style="margin: 0" />
+        <h4>
+          Place :<span>{{ data.city }}</span>
+        </h4>
+        <h4>
+          Duration:
+          <span>{{ data.date?.start_date }} to {{ data.date?.end_date }}</span>
+        </h4>
+        <h4>
+          Travelling budget:
+          <span>{{ data.budget }} {{ data.currency }} </span>
+        </h4>
+        <h4>
+          Food :<span>{{ data.food }}</span>
+        </h4>
+        <h4>
+          Travelling : <span>{{ data.travelling }}</span>
+        </h4>
+        <h4>
+          Accomodation: <span>{{ data.accomodation }}</span>
+        </h4>
+      </div>
+    </div>
   </div>
 </div>

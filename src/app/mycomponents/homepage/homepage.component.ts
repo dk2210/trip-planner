@@ -12,9 +12,10 @@ export class HomepageComponent implements OnInit {
 
   constructor(private dataService: DataServiceService) {
 
-    this.dataService.dataInfo().subscribe((ele) => {
-      console.log("GEtting Data:", ele)
-    })
+    this.dataService.dataInfo()
+      .subscribe((ele) => {
+        console.log("GEtting Data:", ele)
+      })
 
   }
 

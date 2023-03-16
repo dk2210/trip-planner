@@ -8,30 +8,46 @@
   letter-spacing: 1.5px;
   /* padding: 0.5% 0; */
   z-index: 99;
+  font-size: 11px;
+  padding: 0;
 }
 
 .navbar_box_1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 40%;
+  width: 30%;
+  margin-left: 3rem;
   /* font-family: Monospace;     */
+}
+
+.navbar_box_1 > div {
+  height: inherit;
+  padding: 0px 0.5rem;
+}
+
+.navbar_box_1 > div:hover {
+  color: #fff;
+  background-color: black;
 }
 
 .navbar_box_2 {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 17%;
   justify-content: center;
 }
 .navbar_box_2 > button {
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 30px;
   border: 2px solid darkgrey;
 }
 .navbar_box_2 > button:hover {
   border-radius: 15px;
   cursor: grab;
+  color: #fff;
+  background-color: black;
+  border: 2px solid white;
 }
 
 .listPage,

@@ -1,6 +1,8 @@
 import { animate, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Data } from '../../../Type'
+import { Data } from '../../../Type';
+import { DataServiceService } from 'src/app/services/data-service.service';
+
 
 
 @Component({
@@ -17,14 +19,17 @@ import { Data } from '../../../Type'
   // ]
 })
 export class AddDetailsComponent {
+
+  constructor(private dataService: DataServiceService) { }
   @Output() changeStatus = new EventEmitter<boolean>();
   // isForm1: boolean = true;
   // isForm2: boolean = false;
   // isForm1: boolean = false;
   // isForm2: boolean = true;
-  isForm3: boolean = true;
+  isForm1: boolean = true;
   isForm2: boolean = false;
-  isForm1: boolean = false;
+  isForm3: boolean = false;
+  isDataContiner: boolean = false;
 
 
   data!: Partial<Data>
@@ -48,11 +53,21 @@ export class AddDetailsComponent {
       alert("Please fill the required field!")
     } else {
       this.data = {
-
+        city: this.city,
+        date: {
+          start_date: this.start_date,
+          end_date: this.end_date,
+        },
+        budget: this.budget,
+        currency: this.currency,
+        travelling: this.travelling,
+        accomodation: this.accomodation,
+        food: this.food,
       }
       this.isForm1 = false;
       this.isForm2 = true;
-      this.isForm3 = false
+      this.isForm3 = false;
+      this.isDataContiner = false;
     }
   }
 
@@ -75,24 +90,9 @@ export class AddDetailsComponent {
       this.isForm1 = false;
       this.isForm2 = false;
       this.isForm3 = true;
+      this.isDataContiner = false;
     }
-    console.log("Getting budget:", this.travelling)
   }
-
-  // handleForm3Submit() {
-  //   if (!this.accomodation || !this.food) {
-  //     alert("Please fill the required field!")
-  //   } else {
-  //     this.data = {
-  //       accomodation: this.accomodation,
-  //       food: this.food,
-  //     }
-  //   }
-
-  //   this.isForm1 = false;
-  //   this.isForm2 = false;
-  //   this.isForm3 = false;
-  // }
 
   handleFormBack(formNO: number) {
     if (formNO == 1) {
@@ -107,6 +107,7 @@ export class AddDetailsComponent {
       this.isForm1 = false;
       this.isForm2 = true
       this.isForm3 = false;
+      this.isDataContiner = false;
     }
   }
 
@@ -126,11 +127,17 @@ export class AddDetailsComponent {
         accomodation: this.accomodation,
         food: this.food,
       }
+      this.dataService.addData(this.data).subscribe();
+      this.isForm1 = false;
+      this.isForm2 = false;
+      this.isForm3 = false;
+      this.isDataContiner = true;
+
     }
-    console.log("Getting Data: ", this.data)
-    // this.isForm1 = false;
-    // this.isForm2 = false;
-    // this.isForm3 = false;
+  }
+
+  handleClickforComplition() {
+
   }
 }
 

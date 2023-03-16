@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { DatePipe } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './mycomponents/navbar/navbar.component';
@@ -37,7 +37,8 @@ import { CardModelComponent } from './mycomponents/list-data/card-model/card-mod
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    DatePipe
   ],
   providers: [],
   bootstrap: [AppComponent]

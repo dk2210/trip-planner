@@ -15,4 +15,13 @@ export class DataServiceService {
     return this.http.get(this.baseUrl)
   }
 
+  dataOneInfo(id: string) {
+    return this.http.get(this.baseUrl + `list-data/` + id);
+  }
+
+  addData(data: any) {
+    console.log("Getting Data", data)
+    return this.http.post(this.baseUrl + 'post-data', data)
+  }
+
 }
