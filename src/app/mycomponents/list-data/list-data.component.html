@@ -10,12 +10,12 @@
         <div>
           <h2>{{ i + 1 }}).</h2>
           <h2>
-            Place : <span class="data_text">{{ ele.city }}</span>
+            Place : <span class="data_text">{{ ele?.city }}</span>
           </h2>
           <h3>
             Duration :
-            <span class="data_text">{{ ele.date.start_date }}</span> to
-            <span class="data_text">{{ ele.date.end_date }}</span>
+            <span class="data_text">{{ ele?.date.start_date }}</span> to
+            <span class="data_text">{{ ele?.date.end_date }}</span>
           </h3>
           <p class="" (click)="handleCardModel(ele._id)">more information</p>
         </div>

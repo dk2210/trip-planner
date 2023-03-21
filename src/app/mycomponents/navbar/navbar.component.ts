@@ -28,4 +28,8 @@ export class NavbarComponent {
   handleClickForHomePage() {
     this.router.navigate(['/'])
   }
+
+  handlePreferencePage() {
+    this.router.navigate(['/preference']);
+  }
 }

@@ -1,0 +1,27 @@
+<div>
+    <div id="preferencePage_container">
+        <app-navbar
+        (closeStatus)="handleStatus($event)"
+        (closeStatusForListPage)="handleStatusForLisPage($event)"
+      ></app-navbar>
+      <div id="cards_container">
+        <div class="card" *ngFor="let ele of placeDataArr">
+            
+                <h1>Hello</h1>
+        
+        </div>
+      </div>
+
+    
+</div>
+<app-add-details
+  *ngIf="isSelected"
+  (changeStatus)="statusChanged($event)"
+></app-add-details>
+
+<app-list-data
+  *ngIf="isSelectedForListPage"
+  (closeStatusForListPage)="statusChanged($event)"
+></app-list-data>
+
+<!-- https://maps.googleapis.com/maps/api/place/details/output?parameters -->

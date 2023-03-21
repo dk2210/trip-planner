@@ -37,14 +37,14 @@
         <img src="{{ imageUrl }}" alt="" />
       </div>
       <div id="card_content_box">
-        <h2 id="place_name">{{ cardData.city }}</h2>
+        <h2 id="place_name">{{ cardData?.city }}</h2>
         <h3 id="date_timeline">
-          {{ cardData.date.start_date }} to {{ cardData.date.end_date }}
+          {{ cardData?.date.start_date }} to {{ cardData?.date.end_date }}
         </h3>
         <h4 id="budget_currency">
           Expected budget :
           <span id="budeget_currency_value"
-            >{{ cardData.budget }} {{ cardData.currency }}</span
+            >{{ cardData?.budget }} {{ cardData?.currency }}</span
           >
         </h4>
       </div>
@@ -52,16 +52,16 @@
 
     <div id="container">
       <div>
-        <h2>{{ cardData.food }}</h2>
+        <h2>{{ cardData?.food }}</h2>
         <p>FOOD</p>
       </div>
       <div>
-        <h2>{{ cardData.travelling }}</h2>
+        <h2>{{ cardData?.travelling }}</h2>
         <p>TRAVELLING</p>
       </div>
 
       <div>
-        <h2>{{ cardData.accomodation }}</h2>
+        <h2>{{ cardData?.accomodation }}</h2>
         <p>ACCOMODATION</p>
       </div>
     </div>

@@ -51,6 +51,6 @@
 }
 
 .listPage,
-.homePage {
+.homePage,.preferencePage {
   cursor: grab;
 }

@@ -36,11 +36,12 @@ export class ListDataComponent {
   }
 
   handleStatus(reply: boolean) {
-    this.isSelected = reply;
+    this.isSelectedAddPage = reply;
   }
 
   statusChanged(reply: boolean) {
-    this.isSelected = reply;
+    this.isSelectedAddPage = reply;
+    console.log("Status changed",reply);
     this.isSelectedForListPage = reply
   }
 

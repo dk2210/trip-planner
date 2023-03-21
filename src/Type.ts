@@ -13,3 +13,13 @@ export interface Data {
     food: string
 }
 
+export interface placeData {
+    imageUrl: string,
+    title: string,
+    decription: string,
+    food : string[],
+    accomodation: string[],
+    travelling: string[],
+    rating: string,
+}
+

@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ListDataComponent } from './mycomponents/list-data/list-data.component';
 import { CardModelComponent } from './mycomponents/list-data/card-model/card-model.component';
+import { PreferencePageComponent } from './mycomponents/preference-page/preference-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CardModelComponent } from './mycomponents/list-data/card-model/card-mod
     AddDetailsComponent,
     TimelineCardsComponent,
     ListDataComponent,
-    CardModelComponent
+    CardModelComponent,
+    PreferencePageComponent
   ],
 
   imports: [
