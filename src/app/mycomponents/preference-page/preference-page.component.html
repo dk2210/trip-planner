@@ -1,27 +1,77 @@
-<div>
-    <div id="preferencePage_container">
-        <app-navbar
-        (closeStatus)="handleStatus($event)"
-        (closeStatusForListPage)="handleStatusForLisPage($event)"
-      ></app-navbar>
-      <div id="cards_container">
-        <div class="card" *ngFor="let ele of placeDataArr">
-            
-                <h1>Hello</h1>
-        
+<div id="body">
+  <div id="preferencePage_container">
+    <app-navbar
+      (closeStatus)="handleStatus($event)"
+      (closeStatusForListPage)="handleStatusForLisPage($event)"
+    ></app-navbar>
+    <div id="cards_container">
+      <div class="card" *ngFor="let ele of placeDataArr">
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="image_box">
+          <img src="{{ ele.imageUrl }}" alt="cover" />
+        </div>
+        <div class="content_container">
+          <h3>{{ ele.title }}</h3>
+          <!-- <h4>{{ele.decription}}</h4> -->
+          <p>{{ ele.rating }}</p>
         </div>
       </div>
+    </div>
+  </div>
 
-    
+  <!-- onther -->
+  <app-add-details
+    *ngIf="isSelected"
+    (changeStatus)="statusChanged($event)"
+  ></app-add-details>
+
+  <app-list-data
+    *ngIf="isSelectedForListPage"
+    (closeStatusForListPage)="statusChanged($event)"
+  ></app-list-data>
+
+  <!-- https://maps.googleapis.com/maps/api/place/details/output?parameters -->
+
+  <!-- 2 -->
+  <div class="container">
+    <div class="carousel">
+      <div class="carousel__face"><span>This is something</span></div>
+      <div class="carousel__face"><span>Very special</span></div>
+      <div class="carousel__face"><span>Special is the key</span></div>
+      <div class="carousel__face"><span>For you</span></div>
+      <div class="carousel__face"><span>Just give it</span></div>
+      <div class="carousel__face"><span>A try</span></div>
+      <div class="carousel__face"><span>And see</span></div>
+      <div class="carousel__face"><span>How IT Works</span></div>
+      <div class="carousel__face"><span>Woow</span></div>
+    </div>
+  </div>
+
+  <div id="aboutUs_container">
+    <div id="content_aboutus">
+      <h1>About Us</h1>
+      <hr>
+      <div class="box_2">
+        <h1>Hey!  I am your trip - planner</h1>
+        <h2> <span class="dot_icon">  </span> Do you know us ?</h2>
+        <p>Trip planner is the wep -app, where thousands of users can set their schedule of trip and they have enjoyed a lot just becuase of having preplanning of the trip.</p>
+        <h2> <span class="dot_icon">  </span> Story</h2>
+        <p>We have started this company when our founder was not gotten any idea during his first trip after collage and he thought that nowadays, people should plan thier trip accocrding to their conveniences.</p>
+        <h2> <span class="dot_icon">  </span> What we offer</h2>
+        <p>We gives one type of flexibity to use to make their trip budget-freindly and also user can save their data for fututre reference.</p>
+      </div>
+    </div>
+
+    <div id="about_us_svg_box">
+      <img src="../../../assets/about us(2).svg" alt="about_us">
+    </div>
+    <div id="lower_svg_box">
+      <img src="../../../assets/wave (1).svg" alt="wave">
+    </div>
+  </div>
+  
 </div>
-<app-add-details
-  *ngIf="isSelected"
-  (changeStatus)="statusChanged($event)"
-></app-add-details>
 
-<app-list-data
-  *ngIf="isSelectedForListPage"
-  (closeStatusForListPage)="statusChanged($event)"
-></app-list-data>
-
-<!-- https://maps.googleapis.com/maps/api/place/details/output?parameters -->

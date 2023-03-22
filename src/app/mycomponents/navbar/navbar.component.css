@@ -10,6 +10,7 @@
   z-index: 99;
   font-size: 11px;
   padding: 0;
+  border: 1px solid black;
 }
 
 .navbar_box_1 {
