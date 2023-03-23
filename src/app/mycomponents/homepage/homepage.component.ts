@@ -9,6 +9,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 export class HomepageComponent implements OnInit {
   isSelected: boolean = false;
   isSelectedForListPage: boolean = false;
+  handleisHomePageSelected: boolean = true;
 
   constructor(private dataService: DataServiceService) {
 

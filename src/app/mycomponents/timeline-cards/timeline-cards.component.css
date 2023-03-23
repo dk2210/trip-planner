@@ -2,10 +2,11 @@
 #steps_container {
   /* border: 1px solid; */
   width: 50%;
-  margin: 4% auto;
+  margin: 0rem auto;
   display: flex;
   flex-direction: column;
   height: auto;
+  font-family: fantasy;;
   padding: 10px;
 }
 
@@ -30,8 +31,8 @@
 .left_side_image_box > img {
   width: 300px;
   position: absolute;
-  top: -45px;
-  left: 150px;
+  top: 0rem;
+  left: 5.5rem;
   /* height: 100%; */
   /* border: 1px solid red; */
   padding: 0;
@@ -45,13 +46,14 @@
 .left_side_icon_box > img {
   position: absolute;
   width: 50px;
-  top: 45px;
-  left: 182px;
+  top: 5.5rem;
+  left: 7.5rem;;
 }
 
 .left_side_content_continer {
   width: 50%;
   height: 35vh;
+  height: auto !important;
   margin-right: 0px;
   /* height: 300px; */
   border: 1px solid lightgrey;
@@ -82,16 +84,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid blue; */
-  padding: 10px 10px 0px 10px;
+  padding: 0rem 1rem;
   position: relative;
   height: auto;
 }
 
 .right_side_content_continer {
-  width: 50%;
+  width:50%;
   margin-left: 0;
-  height: 35vh;
+  height: auto !important;
   /* height: 300px; */
   border: 1px solid lightgrey;
   border-radius: 20px;
@@ -118,7 +119,8 @@
 
 .right_side_image_box {
   width: 420px;
-  height: 420px;
+  /* height: 420px; */
+  height: inherit;;
   /* border: 1px solid green; */
   padding: 0px;
   margin: 0px;
@@ -127,10 +129,8 @@
 .right_side_image_box > img {
   width: 300px;
   position: absolute;
-  top: 0px;
-  right: 150px;
-  /* height: 100%; */
-  /* border: 1px solid red; */
+  top: 0rem;
+  right: 5.5rem;
   padding: 0;
 }
 
@@ -142,8 +142,8 @@
 .right_side_icon_box > img {
   position: absolute;
   width: 50px;
-  top: 90px;
-  right: 180px;
+  top: 5.5rem;
+  right: 7.5rem;;
 }
 
 /*  */

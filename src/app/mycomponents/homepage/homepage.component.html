@@ -1,9 +1,10 @@
-<div>
+<div id="body">
   <div id="homePage_cover">
     <app-navbar
       (closeStatus)="handleStatus($event)"
       (closeStatusForListPage)="handleStatusForLisPage($event)"
-    ></app-navbar>
+      [handleisHomePageSelectedTag]="handleisHomePageSelected"
+      ></app-navbar>
     <!-- <img src="https://wallpaperaccess.com/full/1432000.jpg" alt="home-page" /> -->
     <div id="container">
       <div>
@@ -22,7 +23,7 @@
   <h2 id="steps_heading">Steps for batter Experience</h2>
   <!-- Steps for planning the trip -->
   <app-timeline-cards></app-timeline-cards>
-</div>
+
 <app-add-details
   *ngIf="isSelected"
   (changeStatus)="statusChanged($event)"
@@ -32,5 +33,6 @@
   *ngIf="isSelectedForListPage"
   (closeStatusForListPage)="statusChanged($event)"
 ></app-list-data>
+</div>
 
 <!-- long content about travelling and planing -->

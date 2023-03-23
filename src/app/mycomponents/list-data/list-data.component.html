@@ -3,7 +3,8 @@
     <app-navbar
       (closeStatus)="handleStatus($event)"
       (closeStatusForListPage)="handleStatusForListPage($event)"
-    ></app-navbar>
+      [handleisListPageSelectedTag]="handleisListPageSelected"
+      ></app-navbar>
     <h1>Your planning ...</h1>
     <div id="card_container">
       <div class="card" *ngFor="let ele of data; let i = index">

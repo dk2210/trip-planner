@@ -11,6 +11,7 @@ export class PreferencePageComponent implements OnInit  {
   isSelected: boolean = false;
   isSelectedForListPage: boolean =false;
   placeDataArr: placeData[] = [];
+  handleisPreferencePageSelected: boolean = true;
 
   ngOnInit(): void {
     this.placeDataArr = [

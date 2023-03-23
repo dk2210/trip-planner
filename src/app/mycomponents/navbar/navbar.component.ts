@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,8 +12,12 @@ export class NavbarComponent {
 
   @Output() closeStatus = new EventEmitter<boolean>();
   @Output() closeStatusForListPage = new EventEmitter<boolean>();
+  @Input() handleisListPageSelectedTag!:boolean;
+  @Input() handleisHomePageSelectedTag!: boolean;
+  @Input() handleisPreferencePageSelectedTag!: boolean;
 
   isSelected: boolean = false;
+
 
   handleClick() {
     // this.router.navigate(['/'])
@@ -22,14 +26,19 @@ export class NavbarComponent {
 
   handleClickForListPage() {
     this.closeStatusForListPage.emit(true);
-    this.router.navigate(['/list-data'])
+    this.router.navigate(['/list-data']);
+    this.isSelected= false;
   }
 
   handleClickForHomePage() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
 
   handlePreferencePage() {
     this.router.navigate(['/preference']);
+  }
+
+  handleBgcChange(reply: boolean){
+    console.log("BGC chnaging:", reply);
   }
 }

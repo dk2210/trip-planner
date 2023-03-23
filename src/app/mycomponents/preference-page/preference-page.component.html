@@ -3,6 +3,7 @@
     <app-navbar
       (closeStatus)="handleStatus($event)"
       (closeStatusForListPage)="handleStatusForLisPage($event)"
+      [handleisPreferencePageSelectedTag] = 'handleisPreferencePageSelected'
     ></app-navbar>
     <div id="cards_container">
       <div class="card" *ngFor="let ele of placeDataArr">

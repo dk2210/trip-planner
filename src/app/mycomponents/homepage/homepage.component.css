@@ -1,3 +1,5 @@
+
+
 #homePage_cover {
   background-image: url("https://wallpaperaccess.com/full/1432000.jpg");
   background-position: center;
@@ -10,6 +12,7 @@
   height: 900px;
   padding: 0;
   margin: 0;
+  font-family: fantasy;
 }
 
 /* #homePage_cover > div {
@@ -49,6 +52,9 @@
   text-align: center;
   font-weight: bold;
   font-size: 60px;
+  font-family: fantasy;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
 /* Animation */

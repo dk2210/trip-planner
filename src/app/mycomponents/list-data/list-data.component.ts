@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { ImageServiceService } from 'src/app/services/image-service.service';
 
@@ -8,6 +8,9 @@ import { ImageServiceService } from 'src/app/services/image-service.service';
   styleUrls: ['./list-data.component.css']
 })
 export class ListDataComponent {
+handleBgcChange($event: Event) {
+throw new Error('Method not implemented.');
+}
 
   data!: any
   cardData!: any
@@ -26,10 +29,10 @@ export class ListDataComponent {
   isSelectedForCardModel: boolean = false;
   isSelectedAddPage: boolean = false
   imageUrl!: string
-
+  handleisListPageSelected: boolean= true;
 
   @Output() closeStatusForListPage = new EventEmitter<boolean>();
-
+  
   handleModuleClose() {
     console.log("Hello World");
     this.closeStatusForListPage.emit(false)
@@ -37,6 +40,7 @@ export class ListDataComponent {
 
   handleStatus(reply: boolean) {
     this.isSelectedAddPage = reply;
+    console.log("I am testing")
   }
 
   statusChanged(reply: boolean) {
@@ -46,7 +50,8 @@ export class ListDataComponent {
   }
 
   handleStatusForListPage(reply: boolean) {
-    this.isSelectedForListPage = reply
+    this.isSelectedForListPage = reply;
+    this.handleisListPageSelected = true;
   }
 
   handleCardModel(id: string) {

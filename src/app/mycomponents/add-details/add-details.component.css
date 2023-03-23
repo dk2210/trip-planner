@@ -19,6 +19,7 @@ form {
   margin: auto auto auto  auto;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  font-family: fantasy;
 }
 .input_field {
   display: flex;
@@ -44,12 +45,14 @@ form {
   width: 100%;
   font-size: 20px;
   border-radius: 10px;
+  font-family: fantasy;
 }
 .date_input_field {
   display: flex;
   width: 90%;
   margin: 10% auto;
   border-radius: 10px;
+  font-family: fantasy;
 }
 .date_input_box-1,
 .date_input_box-2 {
@@ -101,6 +104,7 @@ form {
   font-size: 20px;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  font-family: fantasy;
 }
 
 .budget_select_option {
@@ -111,6 +115,7 @@ form {
   font-weight: bold;
   cursor: pointer;
   border: 1px solid lightgrey;
+  font-family: fantasy;
 }
 
 /* Traveeling Field */
@@ -126,6 +131,7 @@ form {
   border: 1px solid lightgrey;
   border-radius: 10px;
   padding: 1rem 1.5rem;
+  font-family: fantasy;
 }
 
 .travelling_field > p:nth-child(2) {
@@ -161,6 +167,7 @@ form {
 .packing_field > p:nth-child(2) {
   font-weight: bold;
   letter-spacing: 1.2px;
+  font-family: fantasy;
 }
 
 .packing_field > a:nth-child(3) {
@@ -180,6 +187,7 @@ form {
   padding: 1rem 2.8rem;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  font-family: fantasy; 
 }
 
 .accomodation_icon {
@@ -190,6 +198,7 @@ form {
 
 .accomodation_input_field > h4:nth-child(2) {
   width: inherit;
+  font-family: fantasy;
 }
 
 .accomodation_select_box {
@@ -199,6 +208,7 @@ form {
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+  font-family: fantasy;
   border-radius: 5px;
 }
 
@@ -215,6 +225,7 @@ form {
   padding: 1rem 2.8rem;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  font-family: fantasy;
 }
 
 .food_icon {
@@ -225,6 +236,7 @@ form {
 
 .food_input_field > h4:nth-child(2) {
   width: inherit;
+  font-family: fantasy;
 }
 
 .food_select_box {
@@ -235,6 +247,7 @@ form {
   font-weight: bold;
   font-size: 20px;
   border-radius: 5px;
+  font-family: fantasy;
 }
 
 /* direction button */
@@ -255,6 +268,7 @@ form {
   background-color: #34344c;
   color: white;
   border-radius: 5px;
+  font-family: fantasy;
 }
 
 .directions_button_box > button:hover {
@@ -277,11 +291,12 @@ form {
 }
 
 #data_container {
-  width: 50%;
+  width: 60%;
   height: 100%;
   text-align: center;
   padding: 20px;
   line-height: 3rem;
+  font-family: fantasy;
 }
 
 #data_container > div {
@@ -290,6 +305,7 @@ form {
   height: 100%;
   margin: 3rem auto;
   letter-spacing: 1px;
+  font-family: fantasy;
 }
 
 #data_container > button:last-child {
