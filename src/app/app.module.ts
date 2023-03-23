@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ListDataComponent } from './mycomponents/list-data/list-data.component';
 import { CardModelComponent } from './mycomponents/list-data/card-model/card-model.component';
 import { PreferencePageComponent } from './mycomponents/preference-page/preference-page.component';
+import { FooterComponent } from './mycomponents/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PreferencePageComponent } from './mycomponents/preference-page/preferen
     TimelineCardsComponent,
     ListDataComponent,
     CardModelComponent,
-    PreferencePageComponent
+    PreferencePageComponent,
+    FooterComponent
   ],
 
   imports: [

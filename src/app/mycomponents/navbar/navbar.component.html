@@ -1,5 +1,5 @@
-<div id="navbar">
-  <div  class="navbar_box_1">
+<div [ngStyle]="{'backgroundColor' :  handleisPreferencePageSelectedTag ? 'white' : 'none'}" id="navbar">
+  <div class="navbar_box_1">
     <div [ngStyle]="{'backgroundColor' :  handleisHomePageSelectedTag ? 'black' : 'none', 'color' :  handleisHomePageSelectedTag ? 'white' : 'none' }" class="homePage" (click)="handleClickForHomePage()">
       <h1>Home</h1>
     </div>
