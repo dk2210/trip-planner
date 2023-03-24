@@ -1,10 +1,13 @@
 <div id="body">
   <div id="homePage_cover">
-    <app-navbar
-      (closeStatus)="handleStatus($event)"
-      (closeStatusForListPage)="handleStatusForLisPage($event)"
-      [handleisHomePageSelectedTag]="handleisHomePageSelected"
-      ></app-navbar>
+    <div class="navbar" style="opacity: 0.7; position: fixed; top: 0; width: 100%;">
+      <app-navbar
+      (scroll)="onWindowScroll();"
+        (closeStatus)="handleStatus($event)"
+        (closeStatusForListPage)="handleStatusForLisPage($event)"
+        [handleisHomePageSelectedTag]="handleisHomePageSelected"
+        ></app-navbar>
+    </div>
     <!-- <img src="https://wallpaperaccess.com/full/1432000.jpg" alt="home-page" /> -->
     <div id="container">
       <div>

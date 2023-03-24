@@ -7,11 +7,11 @@
   opacity: 0.7;
   letter-spacing: 1.5px;
   /* padding: 0.5% 0; */
-  z-index: 99;
+  /* z-index: 99; */
   font-size: 11px;
   padding: 0;
   border: 1px solid rgb(221, 221, 221);
-  font-family: fantasy;;
+  font-family: fantasy;
 }
 
 .navbar_box_1 {

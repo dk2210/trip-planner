@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { placeData } from 'src/Type';
 
 @Component({
@@ -12,6 +12,26 @@ export class PreferencePageComponent implements OnInit  {
   isSelectedForListPage: boolean =false;
   placeDataArr: placeData[] = [];
   handleisPreferencePageSelected: boolean = true;
+
+  @HostListener('window:scroll', ['$event'])
+
+onWindowScroll() {
+    let element = document.querySelector('.navbar') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('navbar-inverse');
+      // element.style.position = 'sticky';
+      element.style.width = '100%';
+      element.style.backgroundColor = '#fff';
+      element.style.zIndex= '1000';
+      element.style.top = '0';
+      element.style.opacity = '1';
+      console.log(' I am one')
+    } else {
+      element.classList.remove('navbar-inverse');
+      console.log(' I am two');
+      element.style.opacity='0.7'
+    }
+  }
 
   ngOnInit(): void {
     this.placeDataArr = [

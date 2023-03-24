@@ -1,11 +1,14 @@
 <div>
   <div id="listDataPage_Cover">
-    <app-navbar
-      (closeStatus)="handleStatus($event)"
-      (closeStatusForListPage)="handleStatusForListPage($event)"
-      [handleisListPageSelectedTag]="handleisListPageSelected"
-      ></app-navbar>
-    <h1>Your planning ...</h1>
+    <div class="navbar" style="opacity: 0.7; position: fixed; top: 0; width: 100%;">
+      <app-navbar
+      (scroll)="onWindowScroll();"
+        (closeStatus)="handleStatus($event)"
+        (closeStatusForListPage)="handleStatusForListPage($event)"
+        [handleisListPageSelectedTag]="handleisListPageSelected"
+        ></app-navbar>
+    </div>
+    <h1 style="margin: 5rem 0 0 0 ">Your planning ...</h1>
     <div id="card_container">
       <div class="card" *ngFor="let ele of data; let i = index">
         <div>
@@ -34,5 +37,44 @@
         (changeStatus)="statusChanged($event)"
       ></app-add-details>
     </div>
+
   </div>
+    <!-- After card part -->
+  <div class="features_container">
+    <!-- card - 1 -->
+    <div class="feature_card">
+      <div class="feature_heading_conteiner">
+        <div class="feature_heading_icon_box">
+          <img src="../../../assets/support_icon.svg" alt="support-team">
+        </div>
+        <h3>24*7 Support Staff</h3>
+      </div>
+      <h4>Explore the best experiences in your favourite cities</h4>
+    </div>
+    
+    <!-- card - 2 -->
+    <div class="feature_card">
+      <div class="feature_heading_conteiner">
+        <div class="feature_heading_icon_box">
+          <img src="../../../assets/currency_icon.svg" alt="support-team">
+        </div>
+        <h3>Lowest Price</h3>
+      </div>
+      <h4>Guaranteed lowest prices. Anyday, everyday.</h4>
+    </div>
+    
+    <!-- card - 3 -->
+    <div class="feature_card">
+      <div class="feature_heading_conteiner">
+        <div class="feature_heading_icon_box">
+          <img src="../../../assets/shield_icon.svg" alt="support-team">
+        </div>
+        <h3>100% Secure</h3>
+      </div>
+      <h4>Every transaction is secure. Your money is safe</h4>
+    </div>
+  </div>
+
+    <!-- footer -->
+    <app-footer></app-footer>
 </div>
