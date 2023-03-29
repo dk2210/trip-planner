@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #fff;
   font-family: "Popins";
-  opacity: 0.7;
+  opacity: 0.9;
   letter-spacing: 1.5px;
   /* padding: 0.5% 0; */
   /* z-index: 99; */
@@ -40,17 +40,20 @@
   justify-content: center;
 }
 .navbar_box_2 > button {
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px 30px;
+  background-color: black !important;;
   font-family: fantasy;
-  border: 2px solid darkgrey;
+  color: white !important;
+  border-radius: 3px;
+  /* border: 2px solid darkgrey; */
 }
 .navbar_box_2 > button:hover {
-  border-radius: 15px;
+  border-radius: 13px;
   cursor: grab;
   color: #fff;
   background-color: black;
-  border: 2px solid white;
+  /* border: 2px solid white; */
 }
 
 .listPage,

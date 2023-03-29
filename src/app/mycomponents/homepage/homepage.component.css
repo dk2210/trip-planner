@@ -26,8 +26,8 @@
 
 #container > div:first-child {
   background-color: #ffffff;
-  background-color: #84878b;
-  color: white;
+  /* background-color: #84878b; */
+  /* color: white; */
   height: 60%;
   border: 1px solid rgb(228, 228, 228);
   opacity: 0.8;
@@ -49,7 +49,7 @@
   width: 50%;
   margin: 4% auto;
 }
-x
+
 
 #steps_heading {
   text-align: center;
