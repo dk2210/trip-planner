@@ -50,7 +50,7 @@ export class HomepageComponent implements OnInit {
 
   statusChanged(reply: boolean) {
     this.isSelected = reply;
-    this.isSelectedForListPage = reply
+    this.isSelectedForListPage = reply;
   }
 
   handleStatusForLisPage(reply: boolean) {

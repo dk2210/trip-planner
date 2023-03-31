@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./timeline-cards.component.css']
 })
 export class TimelineCardsComponent {
-
+  
 }
