@@ -19,6 +19,7 @@ export class PreferencePageComponent implements OnInit  {
   isSelected: boolean = false;
   isSelectedForListPage: boolean =false;
   placeDataArr: placeData[] = [];
+  tempPlaceDataArr: placeData[] = [];
   handleisPreferencePageSelected: boolean = true;
 
   @HostListener('window:scroll', ['$event'])
@@ -41,11 +42,18 @@ onWindowScroll() {
     }
   }
 
+  sortData(array: any) {
+    console.log("geeting Array for sorting:", array);
+    return array.sort((a:any, b:any) => a.title < b.title ? -1 : 1);
+  }
+
   ngOnInit(): void {
  
     this.prefrenceData.getPreferenceData().subscribe( (ele:any) => {
       console.log("ELements:", ele)
-      this.placeDataArr = ele.data;
+      this.tempPlaceDataArr = ele.data;
+      const answer = this.sortData(this.tempPlaceDataArr);
+      this.placeDataArr = answer
     })
 
   }
