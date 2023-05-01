@@ -45,6 +45,7 @@ export class AddDetailsComponent {
 
   handleModuleClose() {
     console.log("Hello World");
+    location.reload();
     this.changeStatus.emit(false)
   }
 
@@ -132,7 +133,6 @@ export class AddDetailsComponent {
       this.isForm2 = false;
       this.isForm3 = false;
       this.isDataContiner = true;
-
     }
   }
 

@@ -10,6 +10,7 @@ import { PreferenceDataService } from 'src/app/services/preference-data.service'
 export class PreferencePageComponent implements OnInit  {
 
   constructor( private prefrenceData : PreferenceDataService) {
+    // location.reload();
     this.prefrenceData.getPreferenceData().subscribe( (ele:any) => {
       console.log("ELements:", ele)
       this.placeDataArr = ele.data;
